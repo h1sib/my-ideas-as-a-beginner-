@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Imposter Voting Panel</title>
+        <style>
+            body {
+                  font-family: Arial, sans-serif;
+                        background-color: #0b0c10;
+                              color: #fff;
+                                    text-align: center;
+                                          padding: 30px;
+                                              }
+
+                                                  h1 {
+                                                        color: #66fcf1;
+                                                            }
+
+                                                                .player {
+                                                                      background-color: #1f2833;
+                                                                            border: 2px solid #66fcf1;
+                                                                                  padding: 10px;
+                                                                                        margin: 10px auto;
+                                                                                              width: 200px;
+                                                                                                    border-radius: 10px;
+                                                                                                          cursor: pointer;
+                                                                                                                transition: 0.3s;
+                                                                                                                    }
+
+                                                                                                                        .player:hover {
+                                                                                                                              background-color: #45a29e;
+                                                                                                                                  }
+
+                                                                                                                                      .voted {
+                                                                                                                                            background-color: #ff4d4d !important;
+                                                                                                                                                }
+                                                                                                                                                  </style>
+                                                                                                                                                  </head>
+                                                                                                                                                  <body>
+                                                                                                                                                    <h1>Vote the Imposter!</h1>
+
+                                                                                                                                                      <div class="player" onclick="vote(this)">Red</div>
+                                                                                                                                                        <div class="player" onclick="vote(this)">Blue</div>
+                                                                                                                                                          <div class="player" onclick="vote(this)">Green</div>
+                                                                                                                                                            <div class="player" onclick="vote(this)">Yellow</div>
+
+                                                                                                                                                              <p id="result"></p>
+
+                                                                                                                                                                <script>
+                                                                                                                                                                    function vote(element) {
+                                                                                                                                                                          // Remove existing vote
+                                                                                                                                                                                let players = document.querySelectorAll('.player');
+                                                                                                                                                                                      players.forEach(p => p.classList.remove('voted'));
+
+                                                                                                                                                                                            // Add vote to selected player
+                                                                                                                                                                                                  element.classList.add('voted');
+
+                                                                                                                                                                                                        // Show result
+                                                                                                                                                                                                              document.getElementById("result").textContent = "You voted for " + element.textContent + "!";
+                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                    </script>
+                                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                                    </html>
