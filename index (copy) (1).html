@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>My 1st website </title>
+  <style>
+    body{
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+      article {
+        margin:25px;
+        padding:20px;
+        max-width:600px;
+        background:#ffffff;
+    } 
+    h1{
+      text-align:center;
+      color:004d40;
+      margin-top:30px
+    }
+    h2{
+      text-align: center;
+      color:00695c;
+      margin-bottom:10px
+    }
+    p {
+      color:black;
+      text-align:center;
+      margin:auto;
+      padding:auto;
+    }
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      background-color: #004d40;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    section {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+  border-top: 2px solid #ccc;
+  }
+</style>
+    </style>
+</head>
+  <body>
+    <script>
+      window.onload =function() {
+      alert("Welcome to my 2nd website!");
+  };
+ function showSearch(event) {
+    event.preventDefault(); // stop the page from reloading
+
+    var input = document.getElementById("searchInput").value.toLowerCase();
+
+    // Get all article elements
+    var articles = document.querySelectorAll("article");
+
+    // Hide all articles first
+    articles.forEach(function(article) {
+      article.style.display = "none";
+    });
+
+    // Loop through each article and check if the text matches
+    let found = false;
+    articles.forEach(function(article) {
+      if (article.innerText.toLowerCase().includes(input)) {
+        article.style.display = "block";
+        found = true;
+      }
+    });
+
+    if (!found) {
+      alert("Inventor not found.");
+       }
+      }
+    </script>
+  <h1>My 2nd website</h1>
+<p id="description"><i>
+  This is my 2nd website,I am learning to create websites using HTML and CSS.</i></p>
+  <form onsubmit="showSearch(event);return false;">
+    <input type="text" id="searchInput" placeholder="Search" style="padding: 8px; width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+    <button type="submit" style="padding: 8px 12px; border: none; background-color: white; border-radius: 5px;">Search</button>
+  </form>
+    <header><h2>The Inventor's Hall</h2>
+    <p><em><b>"Welcome to the world of innovation! Explore the lives and breakthroughs of history's most famous inventors who changed the world with their ideas and inventions."</b></em></p></header>
+    <article id="einstein"><h2>Albert Einstein</h2>
+      <p>Albert Einstein (1879–1955)
+Famous for: Theory of Relativity, photoelectric effect, contributions to quantum mechanics.</p>
+        <br>
+<b>Key Inventions/Discoveries:</b>
+  <ul>
+    <li><b>Theory of Special Relativity:</b> Revolutionized the way we understand space, time, and energy.</li>
+
+<li><b>E=mc²:</b> Formula that shows the relationship between energy and mass.</li>
+
+<li><b>Photoelectric Effect:</b> This helped establish quantum theory and earned him the Nobel Prize in Physics in 1921</li>
+    </ul>
+      <h3>More Information:</h3>
+        <a href="https://en.m.wikipedia.org/wiki/Albert_Einstein" target="_blank">click here to learn more.</a></p>
+    </article>
+    <article id="edison"><h2>Thomas Alva Edison</h2>
+    <p>Thomas Edison (1847–1931)
+
+Famous for:Inventions in electricity, motion pictures, and sound recording.</p>
+      <br>
+
+<b>Key Inventions/Discoveries:</b>     
+<ul>
+<em><li><b>Light Bulb:</b> Edison is often credited with inventing the practical incandescent light bulb, although he improved upon earlier designs.</li>
+
+<li><b>Phonograph:</b> Edison invented the phonograph in 1877, a device capable of recording and reproducing sound, considered the first true sound recording device.</li>
+
+<li><b>Motion Pictures:</b>Edison helped develop the first commercially successful motion picture camera and projector, contributing greatly to the film industry.</li>
+
+<li><b>Electric Power Distribution:</b> He created one of the first electric power stations, helping to develop the infrastructure for electric lighting.</li></em></ul>
+      <h3> more information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Thomas_Edison" target="_blank">click here to learn more</a></p>
+    </article>
+    <article id="curie"><h2>Marie Curie</h2>
+      <p>Marie Curie (1867–1934)<br>
+      Famous for: Pioneering research on radioactivity, first woman to win a Nobel Prize.</p>
+      <br>
+<b>Key Inventions/Discoveries:</b>
+  <ul>
+    <li><b>Discovery of Polonium and Radium:</b> Curie discovered two radioactive elements, greatly expanding the field of atomic physics.</li>
+    <li><b>Work on Radioactivity:</b> She developed the theory of radioactivity and techniques for isolating radioactive isotopes.</li>
+    <li><b>First Mobile X-Ray Units:</b> During WWI, she helped equip ambulances with X-ray machines to assist wounded soldiers.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Marie_Curie" target="_blank">click here to learn more.</a>
+    </article>
+
+    <article id="tesla"><h2>Nikola Tesla</h2>
+      <p>Nikola Tesla (1856–1943)<br>
+      Famous for: AC (Alternating Current) electricity system, innovations in electromagnetism and wireless communication.</p>
+      <br>
+<b>Key Inventions/Discoveries:</b>
+  <ul>
+    <li><b>Alternating Current (AC):</b> Developed the AC power system still used today for power transmission.</li>
+    <li><b>Tesla Coil:</b> A high-voltage transformer used in early radio and television tech.</li>
+    <li><b>Radio Waves:</b> Tesla worked on wireless transmission and was a pioneer of radio communication.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Nikola_Tesla" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="hawking"><h2>Stephen Hawking</h2>
+  <p>Stephen Hawking (1942–2018)<br>
+  Famous for: Theoretical cosmology, black holes, and popular science books.</p>
+  <br>
+  <b>Key Discoveries:</b>
+  <ul>
+    <li><b>Hawking Radiation:</b> Proposed that black holes emit radiation, changing how we understand them.</li>
+    <li><b>Big Bang Theory Support:</b> Supported the idea that the universe had a beginning and expanded over time.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Stephen_Hawking" target="_blank">click here to learn more.</a>
+    </article>
+<article id="galileo"><h2>Galileo Galilei</h2>
+  <p>Galileo Galilei (1564–1642)<br>
+  Famous for: Advancing modern astronomy and physics.</p>
+  <br>
+  <b>Key Inventions/Discoveries:</b>
+  <ul>
+    <li><b>Telescope Improvements:</b> Enhanced the telescope and used it to study the stars.</li>
+    <li><b>Discoveries in Motion:</b> Laid foundations for classical mechanics.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Galileo_Galilei" target="_blank">click here to learn more.</a>
+</article>
+    <article id="newton"><h2>Isaac Newton</h2>
+  <p>Isaac Newton (1643–1727)<br>
+  Famous for: Laws of motion, gravity, and optics.</p>
+  <br>
+  <b>Key Discoveries:</b>
+  <ul>
+    <li><b>Law of Gravity:</b> Explained the force that governs motion in the universe.</li>
+    <li><b>Three Laws of Motion:</b> Foundation of classical mechanics.</li>
+    <li><b>Calculus:</b> Independently developed calculus to solve physical problems.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Isaac_Newton" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="bell"><h2>Alexander Graham Bell</h2>
+  <p>Alexander Graham Bell (1847–1922)<br>
+  Famous for: Inventing the telephone.</p>
+  <br>
+  <b>Key Inventions:</b>
+  <ul>
+    <li><b>Telephone:</b> Created the first practical telephone.</li>
+    <li><b>Speech Devices:</b> Developed tools to assist the hearing impaired.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Alexander_Graham_Bell" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="davinci"><h2>Leonardo da Vinci</h2>
+  <p>Leonardo da Vinci (1452–1519)<br>
+  Famous for: Art, anatomy, engineering, and inventions.</p>
+  <br>
+  <b>Key Contributions:</b>
+  <ul>
+    <li><b>Flying Machines:</b> Designed early versions of helicopters and gliders.</li>
+    <li><b>Engineering Sketches:</b> Created designs for tanks, bridges, and gears.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="wright"><h2>Wright Brothers</h2>
+  <p>Orville and Wilbur Wright (1871–1948 and 1867–1912)<br>
+  Famous for: Inventing and flying the first successful airplane.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>First Powered Flight:</b> Achieved controlled, sustained flight in 1903.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Wright_brothers" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="berners"><h2>Tim Berners-Lee</h2>
+  <p>Tim Berners-Lee (1955–)<br>
+  Famous for: Inventing the World Wide Web.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>World Wide Web:</b> Developed the first web browser and HTTP protocol.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="lovelace"><h2>Ada Lovelace</h2>
+  <p>Ada Lovelace (1815–1852)<br>
+  Famous for: Writing the first computer algorithm.</p>
+  <br>
+  <b>Key Contribution:</b>
+  <ul>
+    <li><b>Early Programming:</b> Wrote algorithm for Charles Babbage's Analytical Engine, considered the first computer program.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Ada_Lovelace" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="lovelace"><h2>Ada Lovelace</h2>
+  <p>Ada Lovelace (1815–1852)<br>
+  Famous for: Writing the first computer algorithm.</p>
+  <br>
+  <b>Key Contribution:</b>
+  <ul>
+    <li><b>Early Programming:</b> Wrote algorithm for Charles Babbage's Analytical Engine, considered the first computer program.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Ada_Lovelace" target="_blank">click here to learn more.</a>
+</article>
+    <article id="babbage"><h2>Charles Babbage</h2>
+  <p>Charles Babbage (1791–1871)<br>
+  Famous for: Designing the first mechanical computer.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>Difference Engine & Analytical Engine:</b> Concepts that led to the development of modern computers.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Charles_Babbage" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="franklin"><h2>Benjamin Franklin</h2>
+  <p>Benjamin Franklin (1706–1790)<br>
+  Famous for: Electricity experiments and inventions.</p>
+  <br>
+  <b>Key Inventions:</b>
+  <ul>
+    <li><b>Lightning Rod:</b> Protected buildings from lightning damage.</li>
+    <li><b>Bifocal Glasses:</b> Combined lenses for near and far vision.</li>
+    <li><b>Franklin Stove:</b> More efficient wood-burning stove.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Benjamin_Franklin" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="hopper"><h2>Grace Hopper</h2>
+  <p>Grace Hopper (1906–1992)<br>
+  Famous for: Early computer programming and COBOL language.</p>
+  <br>
+  <b>Key Contributions:</b>
+  <ul>
+    <li><b>COBOL:</b> Helped develop one of the first high-level programming languages.</li>
+    <li><b>Debugging:</b> Popularized the term "debugging" after finding a moth in a computer.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Grace_Hopper" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="franklin_rosalind"><h2>Rosalind Franklin</h2>
+  <p>Rosalind Franklin (1920–1958)<br>
+  Famous for: Contributions to the discovery of DNA structure.</p>
+  <br>
+  <b>Key Contributions:</b>
+  <ul>
+    <li><b>X-ray Crystallography:</b> Captured "Photo 51," key to understanding DNA's double helix.</li>
+    <li><b>Work on Viruses:</b> Also studied the structure of RNA viruses.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Rosalind_Franklin" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="gutenberg"><h2>Johannes Gutenberg</h2>
+  <p>Johannes Gutenberg (c.1400–1468)<br>
+  Famous for: Inventing the movable-type printing press.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>Printing Press:</b> Revolutionized the spread of knowledge and literacy.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Johannes_Gutenberg" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="turing"><h2>Alan Turing</h2>
+  <p>Alan Turing (1912–1954)<br>
+  Famous for: Foundational work in computer science and codebreaking.</p>
+  <br>
+  <b>Key Contributions:</b>
+  <ul>
+    <li><b>Turing Machine:</b> A model for how computers process information.</li>
+    <li><b>Codebreaking:</b> Broke the German Enigma code during WWII.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Alan_Turing" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="watt"><h2>James Watt</h2>
+  <p>James Watt (1736–1819)<br>
+  Famous for: Improving the steam engine.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>Steam Engine Improvements:</b> Made the steam engine practical for industry and transportation.</li>
+    <li><b>Horsepower & Watt:</b> Developed concepts used in measuring power and energy.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/James_Watt" target="_blank">click here to learn more.</a>
+    </article>
+    <article id="marconi"><h2>Guglielmo Marconi</h2>
+  <p>Guglielmo Marconi (1874–1937)<br>
+  Famous for: Inventing long-distance radio transmission.</p>
+  <br>
+  <b>Key Invention:</b>
+  <ul>
+    <li><b>Wireless Telegraphy:</b> Sent the first radio signal across the Atlantic.</li>
+    <li><b>Development of Radio:</b> Laid the groundwork for modern radio communication.</li>
+  </ul>
+  <h3>More Information:</h3>
+  <a href="https://en.m.wikipedia.org/wiki/Guglielmo_Marconi" target="_blank">click here to learn more.</a>
+    </article>
+  </body>
+</html>
