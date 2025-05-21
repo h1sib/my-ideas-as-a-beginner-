@@ -9,6 +9,6 @@ all = lower+upper+numbers+symbols
 
 length=8
 
-password ="".join(random.sample(all,length))
+password ="".join(random.choices(all,length))
 
 print(password)
